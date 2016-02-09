@@ -1,16 +1,13 @@
 mixin navlink(name, href)
-	li
-		if attributes.class
-			a(class!=attributes.class href=href)= name
-		else
-			a(href=href)= name
-
+	li(id!=attributes.id class!=attributes.class)
+		a(href=href)= name
+				
 nav
 
 	ul
-		+navlink('Home', '#home')
-		+navlink('Projects', '#projects')
-		+navlink('Work', '#work')
-		+navlink('Creative', '#creative')
-		+navlink('Connect', '#connect')
-		+navlink('Resume', 'static/resume.pdf')
+		+navlink('Home', '#home')(id="nav-home")
+		+navlink('Projects', '#projects')(id="nav-projects")
+		+navlink('Work', '#work')(id="nav-work")
+		+navlink('Creative', '#creative')(id="nav-creative")
+		+navlink('Connect', '#connect')(id="nav-connect")
+		+navlink('Resume', 'static/resume.pdf')(id="nav-resume")

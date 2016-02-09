@@ -4,6 +4,8 @@ nav {
 	position: fixed;
 	width: 100%;
 
+	@include timber_gradient;
+
 	text-align: center;
 	font-size: 1.33rem;
 
@@ -18,12 +20,13 @@ nav {
 
 			transition: background-color 0.5s ease;
 
-			&:hover{
-				background-color: $timber_blue; // TODO: change this color
+			&:hover, &.active{
+				background-color: $timber_blue;
 			}
 
 			a {
-				color: #f33;
+				font-weight: $font-weight-light;
+				color: #FFF;
 				text-decoration: none; // Remove the default underline
 			}
 		}
