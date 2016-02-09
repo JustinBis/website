@@ -1,0 +1,9 @@
+@import 'vendor/normalize';
+
+@import 'partials/header';
+@import 'partials/nav';
+
+html {
+	font-family: $font-family;
+	font-size: 16px; // Fixed default for rem units, even though this is default in most browsers
+}

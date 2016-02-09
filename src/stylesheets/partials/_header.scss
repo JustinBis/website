@@ -1,0 +1,30 @@
+@import 'modules/all';
+
+header {
+	width: 100%;
+	height: 80vh;
+	min-height: 600px;
+
+	background-color: $background_dark;
+	background-image: url('../images/grain.png');
+
+	color: #FFF;
+
+	text-align: center;
+
+	h1 {
+		font-size: 2.25rem;
+		font-weight: 100;
+		letter-spacing: 0.66rem;
+	}
+
+	h2 {
+		font-weight: 300;
+	}
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,31 @@
+@import 'modules/colors';
+
+nav {
+	position: fixed;
+	width: 100%;
+
+	text-align: center;
+	font-size: 1.33rem;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		li {
+			display: inline-block;
+			padding: 1rem 1rem 0.5rem;
+
+			transition: background-color 0.5s ease;
+
+			&:hover{
+				background-color: $timber_blue; // TODO: change this color
+			}
+
+			a {
+				color: #f33;
+				text-decoration: none; // Remove the default underline
+			}
+		}
+	}
+}

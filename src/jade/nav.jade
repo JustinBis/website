@@ -1,5 +1,16 @@
+mixin navlink(name, href)
+	li
+		if attributes.class
+			a(class!=attributes.class href=href)= name
+		else
+			a(href=href)= name
+
 nav
+
 	ul
-		li Item 1
-		li Item 2
-		li Item 3
+		+navlink('Home', '#home')
+		+navlink('Projects', '#projects')
+		+navlink('Work', '#work')
+		+navlink('Creative', '#creative')
+		+navlink('Connect', '#connect')
+		+navlink('Resume', 'static/resume.pdf')
