@@ -450,6 +450,7 @@ section#projects {
       section#projects .grid-item:hover .info {
         bottom: 1rem; }
         section#projects .grid-item:hover .info span {
+          opacity: .95;
           top: -3rem; }
   section#projects .width2 {
     width: 60%;
