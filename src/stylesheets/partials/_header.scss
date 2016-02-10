@@ -22,10 +22,8 @@ header {
 		font-weight: $font-weight-light;
 
 		span {
-			height: 2px;
-			width: 100px;
-			background-color: #fff;
-
+			display: inline-block;
+			margin: 0 1rem;
 		}
 	}
 }

@@ -2,6 +2,7 @@
 
 nav {
 	position: fixed;
+	z-index: 100;
 	width: 100%;
 
 	@include timber_gradient;
@@ -27,7 +28,7 @@ nav {
 			a {
 				font-weight: $font-weight-light;
 				color: #FFF;
-				text-decoration: none; // Remove the default underline
+				text-decoration: none; // Remove the default <a> underline
 			}
 		}
 	}

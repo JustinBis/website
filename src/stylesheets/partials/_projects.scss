@@ -1,0 +1,87 @@
+section#projects {
+	background-color: #360033;
+	background-image: url('../images/grain.png');
+
+	color: #fff;
+
+	padding-bottom: 6rem;
+
+	h1 {
+		text-align: center;
+		font-weight: $font-weight-light;
+	}
+
+	.isotope-grid {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	// Clearfix for the isotope grid
+	.isotope-grid:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	$grid-item-width: 30%;
+	$grid-item-height: 200px;
+	$grid-item-margin-bottom: 16px;
+	$grid-item-gutter: 40px;
+
+	.grid-item {
+		position: relative;
+		float: left;
+		width: $grid-item-width;
+		height: $grid-item-height;
+
+		// margin-bottom: $grid-item-margin-bottom;
+
+		background-color: #3a7;
+
+		.info {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+
+			width: 100%;
+
+			padding: 0.5rem;
+			background-color: #fff;
+			color: #000;
+			transition: all 0.5s;
+			span {
+				position: absolute;
+				top: -2rem;
+				left: 0;
+				padding: 0.5rem;
+
+				color: #fff;
+				background-color: #5d7fb9;
+				opacity: .85;
+				transition: all 0.5s;
+			}
+		}
+
+		transition: all 0.5s;
+		&:hover{
+			background-color: lighten(#3a7, 10%);
+			.info {
+				bottom: 1rem;
+
+				span {
+					top: -3rem;
+				}
+			}
+		}
+	}
+
+	.width2 {
+		width: 2 * $grid-item-width;
+		// Fix 
+		margin-right: $grid-item-gutter;
+	}
+
+	.height2 {
+		height: 2 * $grid-item-height + $grid-item-gutter;
+	}
+}

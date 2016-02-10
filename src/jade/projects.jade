@@ -1,1 +1,23 @@
-section#projects
+mixin grid-item(headline)
+	div.grid-item&attributes(attributes)
+		div.info
+			block
+			span= headline
+
+// Prevent margin collapse with an nbsp
+section#projects &nbsp;
+	h1 Projects
+
+	div.isotope-grid
+		+grid-item('DeepCraft')(class="width2 height2")
+			| Custom deep convolutional neural networks for Minecraft
+		+grid-item('CourseLogic')
+			| An easy way for students to schedule classes
+		+grid-item('OpenGL Guides')(class="grid-sizer")
+			| A quick reference for OpenGL made for CS123
+		+grid-item('DarkenJS')
+			| Nightmode made easy with Javascript
+		+grid-item('Gender Identifier')
+			| Author gender identification via machine learning
+		+grid-item('Reddit AMA Bot')
+			| Collects AMA responses on Reddit for easy reading

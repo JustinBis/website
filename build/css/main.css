@@ -353,7 +353,7 @@ td,
 th {
   padding: 0; }
 
-/* UI Gradients */
+/* Thanks to UI Gradients for the CSS fallbacks */
 header {
   width: 100%;
   height: 80vh;
@@ -369,18 +369,18 @@ header {
   header h2 {
     font-weight: 300; }
     header h2 span {
-      height: 2px;
-      width: 100px;
-      background-color: #fff; }
+      display: inline-block;
+      margin: 0 1rem; }
 
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-/* UI Gradients */
+/* Thanks to UI Gradients for the CSS fallbacks */
 nav {
   position: fixed;
+  z-index: 100;
   width: 100%;
   background: #fc00ff;
   /* fallback for old browsers */
@@ -405,8 +405,63 @@ nav {
         color: #FFF;
         text-decoration: none; }
 
+section#projects {
+  background-color: #360033;
+  background-image: url("../images/grain.png");
+  color: #fff;
+  padding-bottom: 6rem; }
+  section#projects h1 {
+    text-align: center;
+    font-weight: 300; }
+  section#projects .isotope-grid {
+    width: 80%;
+    margin: 0 auto; }
+  section#projects .isotope-grid:after {
+    content: '';
+    display: block;
+    clear: both; }
+  section#projects .grid-item {
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 200px;
+    background-color: #3a7;
+    transition: all 0.5s; }
+    section#projects .grid-item .info {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 0.5rem;
+      background-color: #fff;
+      color: #000;
+      transition: all 0.5s; }
+      section#projects .grid-item .info span {
+        position: absolute;
+        top: -2rem;
+        left: 0;
+        padding: 0.5rem;
+        color: #fff;
+        background-color: #5d7fb9;
+        opacity: .85;
+        transition: all 0.5s; }
+    section#projects .grid-item:hover {
+      background-color: #48c891; }
+      section#projects .grid-item:hover .info {
+        bottom: 1rem; }
+        section#projects .grid-item:hover .info span {
+          top: -3rem; }
+  section#projects .width2 {
+    width: 60%;
+    margin-right: 40px; }
+  section#projects .height2 {
+    height: 440px; }
+
 html {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px; }
+
+section {
+  width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

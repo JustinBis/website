@@ -2,8 +2,13 @@
 
 @import 'partials/header';
 @import 'partials/nav';
+@import 'partials/projects';
 
 html {
 	font-family: $font-family;
 	font-size: 16px; // Fixed default for rem units, even though this is default in most browsers
+}
+
+section {
+	width: 100%;
 }
