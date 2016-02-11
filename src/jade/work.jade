@@ -1,8 +1,8 @@
 mixin timeline-item(header1, header2, date, imgurl)
 	div.timeline-block
-		div.timeline-img
-			img(src=imgurl)
+		div.timeline-dot
 		div.timeline-content
+			img(src=imgurl)
 			h2= header1
 			h3= header2
 
@@ -11,27 +11,26 @@ mixin timeline-item(header1, header2, date, imgurl)
 section#work
 	h1 Work
 	div#work-timeline.timeline-container
-		+timeline-item('Brown University', 'Teaching Assistant for Computer Security', 'Spring 2016', 'images/bg/grain.png')
+		+timeline-item('Brown University', 'Teaching Assistant for Computer Security', 'Spring 2016', 'images/icons/brownshield.png')
 			| Helped develop and teach CS166: Computer Systems Security<br>
 			| Created new project specifications and homeworks<br>
 			| Built software solutions with Go, Ruby, and Python
 
-		+timeline-item('Brown University', 'Teaching Assistant for 3D Graphics', 'Fall 2015', 'images/bg/grain.png')
+		+timeline-item('Brown University', 'Teaching Assistant for 3D Graphics', 'Fall 2015', 'images/icons/brownshield.png')
 			| Helped develop and teach Brown University's CS123: Introduction to Computer Graphics. <br>
 			| Worked under graphics legend Professor Andy van Dam to help run the oldest computer graphics class in the known universe. <br>
 			| Built software with C++11 and Qt and taught students about both technologies in depth.
 
-		+timeline-item('PlutoPrep', 'Co-Founder and CTO', '2014 - 2015', 'images/bg/grain.png')
+		+timeline-item('PlutoPrep', 'Co-Founder and CTO', '2014 - 2015', 'images/icons/plutoprep.png')
 			| Co-founded and built the core software powering the medical educational company PlutoPrep. <br>
 			| Raised seed capital at a $500k valuation after successfully presenting to venture capitalists and gaining acceptance to the Plug and Play Startup Camp accelerator. <br>
 			| Worked with Javascript, HTML, and CSS on the Meteor web application framework.
 
-		+timeline-item('DigiSpade', 'Desktop Application Progammer', 'Summer 2015', 'images/bg/grain.png')
+		+timeline-item('DigiSpade', 'Desktop Application Progammer', 'Summer 2015', 'images/icons/digispade.png')
 			| Worked on a scrum team programming desktop software based on Python, Qt, and SQLite <br>
 			| Consulted with customers to identify needs and translated those needs to useable features. <br>
 			| Contributed to the open-sourced PythonicQt package.
 
-		+timeline-item('FiveCurrents', 'I.T. Coordinator', 'Summer 2015', 'images/bg/grain.png')
-			| Co-founded and built the core software powering the medical educational company PlutoPrep. <br>
-			| Raised seed capital at a $500k valuation after successfully presenting to venture capitalists and gaining acceptance to the Plug and Play Startup Camp accelerator. <br>
-			| Worked with Javascript, HTML, and CSS on the Meteor web application framework.
+		+timeline-item('FiveCurrents', 'I.T. Coordinator', 'Summer 2015', 'images/icons/fivecurrents.png')
+			| Worked as part of the I.T. team at the 2015 Baku European Games <br>
+			| Helped support 500+ staff, administered Windows and Linux servers, designed and built fiber optic networks for the Baku Olympic Stadium and fixed all kinds of broken implements of technology.

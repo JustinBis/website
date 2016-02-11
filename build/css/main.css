@@ -551,6 +551,9 @@ section#work {
   .timeline-content p {
     margin: 1rem 0;
     line-height: 1.5; }
+  .timeline-content img {
+    float: right;
+    height: 3.5rem; }
   .timeline-content .timeline-date {
     float: left;
     padding: .5rem 0;
@@ -598,29 +601,21 @@ section#work {
           right: 122%;
           text-align: right; } }
 
-.timeline-img {
+.timeline-dot {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #FF00AA, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05); }
-  .timeline-img img {
-    display: block;
-    width: 24px;
-    height: 24px;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    margin-left: -12px;
-    margin-top: -12px; }
+  background-color: #1FC4B0; }
   @media only screen and (min-width: 1170px) {
-    .timeline-img {
-      width: 60px;
-      height: 60px;
+    .timeline-dot {
+      width: 30px;
+      height: 30px;
       left: 50%;
-      margin-left: -30px; } }
+      top: 15px;
+      margin-left: -15px; } }
 
 section#connect {
   position: relative;
