@@ -17,11 +17,9 @@ section#connect {
 
 	text-align: center;
 
-	// Stop it margins -- just stop!
-	overflow: auto;
-
 	h1 {
-		margin: 2rem 0 4rem;
+		margin: 0;
+		padding: 2rem 0 4rem;
 		font-weight: $font-weight-extra-light;
 		letter-spacing: 0.1em;
 	}
@@ -34,7 +32,7 @@ section#connect {
 		padding: 0;
 
 		// Fix the height so the hover animation can't change the height of the row
-		height: 9rem;
+		min-height: 9rem;
 
 		li {
 			list-style: none;
@@ -56,4 +54,6 @@ section#connect {
 		letter-spacing: 0.1rem;
 	}
 }
+
+
 

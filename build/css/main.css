@@ -622,10 +622,10 @@ section#connect {
   padding: 0 0 2rem;
   background-color: #eee;
   background-image: url("../images/bg/grain.png");
-  text-align: center;
-  overflow: auto; }
+  text-align: center; }
   section#connect h1 {
-    margin: 2rem 0 4rem;
+    margin: 0;
+    padding: 2rem 0 4rem;
     font-weight: 100;
     letter-spacing: 0.1em; }
   section#connect ul {
@@ -633,7 +633,7 @@ section#connect {
     width: 80%;
     margin: 0 auto;
     padding: 0;
-    height: 9rem; }
+    min-height: 9rem; }
     section#connect ul::after {
       clear: both;
       content: '';
