@@ -1,0 +1,249 @@
+section#work {
+	width: 100%;
+	background-color: $deep_bluegreen;
+
+	padding-bottom: 1rem;
+
+	h1 {
+		margin: 0;
+		padding: 0.67em 0; // Swap margin with padding to prevent margin collapse 
+		text-align: center;
+		color: white;
+		font-weight: $font-weight-light;
+	}
+}
+
+// Timeline inspired by https://codyhouse.co/gem/vertical-timeline/
+// 
+// size breakpoints
+$S:     320px;   
+$M:     768px;     
+$L:     1170px;     
+
+// media queries
+@mixin MQ($canvas) {
+	@if $canvas == S {
+		@media only screen and (min-width: $S) { @content; } 
+	}
+	@else if $canvas == M {
+		@media only screen and (min-width: $M) { @content; } 
+	}
+	@else if $canvas == L {
+		@media only screen and (min-width: $L) { @content; } 
+	}
+}
+
+// Clearfix
+@mixin clearfix {
+	&::after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
+
+.timeline-container {
+	width: 80%;
+	max-width: $L; // Limit the size of the timeline
+	margin: 0 auto;
+}
+
+#work-timeline {
+	position: relative;
+	padding: 2rem 0;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+	// Clearfix
+	@include clearfix;
+
+	&::before {
+		/* this is the vertical line */
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 18px;
+		height: 100%;
+		width: 4px;
+		background-color: darken($almost_white, 5%);
+	}
+
+	// Only on large screens
+	@include MQ(L) {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+
+		&::before {
+			left: 50%;
+			margin-left: -2px;
+		}
+	}
+	
+}
+
+.timeline-block {
+	position: relative;
+	margin: 2em 0;
+	
+	// Clearfix
+	@include clearfix;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include MQ(L) {
+		margin: 4em 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// Everyone loves hover effects
+	transition: all 0.5s;
+	top: 0px;
+	&:hover {
+		top: -10px;
+
+		.timeline-content {
+			box-shadow: 1px 3px 2px darken($almost_white, 80%);
+		}
+	}
+}
+
+
+.timeline-content {
+	position: relative;
+	box-sizing: border-box;
+	margin-left: 60px;
+	padding: 1rem;
+	border-radius: 0.25rem;
+	
+	background-color: $almost_white;
+	box-shadow: 0 3px 0 darken($almost_white, 5%);
+	
+	@include clearfix;
+
+	h2, h3{
+		color: $almost_black;
+	}
+
+	h2 {
+		margin: 0
+	}
+
+	h3 {
+		margin: 0.5rem 0 0;
+	}
+
+	p {
+		margin: 1rem 0;
+		line-height: 1.5;
+	}
+
+	.timeline-date {
+		float: left;
+		padding: .5rem 0;
+		opacity: .7;
+		display: inline-block;
+		font-size: 1.25rem;
+		color: $almost_black;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 16px;
+		right: 100%;
+		height: 0;
+		width: 0;
+		border: 7px solid transparent;
+		border-right: 7px solid $almost_white;
+	}
+
+	@include MQ(L) {
+		transition: all 0.5s;
+		margin-left: 0;
+		padding: 1.6em;
+		width: 45%;
+
+		&::before {
+			top: 24px;
+			left: 100%;
+			border-color: transparent;
+			border-left-color: $almost_white;
+		}
+
+		.timeline-date {
+			position: absolute;
+			width: 100%;
+			left: 122%;
+			top: 6px;
+			padding: .8em 0;
+			color: $almost_white;
+		}
+
+		.timeline-block:nth-child(even) & {
+			float: right;
+
+			&::before {
+				top: 24px;
+				left: auto;
+				right: 100%;
+				border-color: transparent;
+				border-right-color: $almost_white;
+			}
+
+			.timeline-date {
+				left: auto;
+				right: 122%;
+				text-align: right;
+			}
+		}
+	}
+
+	// transition: all 0.5s;
+	// top: 0px;
+	// &:hover {
+	// 	box-shadow: 1px 3px 2px darken($almost_white, 90%);
+	// 	top: -10px;
+	// }
+}
+
+.timeline-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px #FF00AA, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05);
+
+	img {
+		display: block;
+		width: 24px;
+		height: 24px;
+		position: relative;
+		left: 50%;
+		top: 50%;
+		margin-left: -12px;
+		margin-top: -12px;
+	}
+
+	@include MQ(L) {
+		width: 60px;
+		height: 60px;
+		left: 50%;
+		margin-left: -30px;
+	}
+
+}
