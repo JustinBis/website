@@ -4,12 +4,15 @@ section#work {
 
 	padding-bottom: 1rem;
 
+	// Prevent margin collapse
+	overflow: auto;
+
 	h1 {
-		margin: 0;
-		padding: 0.67em 0; // Swap margin with padding to prevent margin collapse 
+		margin: 2rem 0;
 		text-align: center;
-		color: white;
-		font-weight: $font-weight-light;
+		color: #fff;
+		font-weight: $font-weight-extra-light;
+		letter-spacing: 0.1em;
 	}
 }
 

@@ -1,0 +1,59 @@
+@import 'modules/grid';
+
+@mixin clearfix {
+	&::after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
+
+section#connect {
+	position: relative;
+	padding: 0 0 2rem;
+
+	background-color: $almost_white;
+	background-image: url('../images/bg/grain.png');
+
+	text-align: center;
+
+	// Stop it margins -- just stop!
+	overflow: auto;
+
+	h1 {
+		margin: 2rem 0 4rem;
+		font-weight: $font-weight-extra-light;
+		letter-spacing: 0.1em;
+	}
+
+	ul {
+		@include row();
+		@include clearfix();
+		width: 80%;
+		margin: 0 auto;
+		padding: 0;
+
+		// Fix the height so the hover animation can't change the height of the row
+		height: 9rem;
+
+		li {
+			list-style: none;
+			@include col(1, 5);
+			
+			font-size: 1rem;
+			color: #000;
+
+			transition: all 0.5s;
+			&:hover {
+				font-size: 1.1rem;
+				color: lighten(#000, 15%);
+			}
+		}
+	}
+
+	.text-under-icon {
+		margin: 1rem 0;
+		letter-spacing: 0.1rem;
+	}
+}
+

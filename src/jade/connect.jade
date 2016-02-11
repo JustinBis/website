@@ -1,17 +1,27 @@
-mixin connect-item(iconurl, href)
-	li
-		a(href=href)
-			img(src=iconurl)
-	
-
+// Font-Awesome based icon
+mixin connect-item-fa(iconclass, href)
+	a(href=href)
+		li
+			i(class=['fa', 'fa-5x', iconclass])
+			div.text-under-icon
+				block
 
 section#connect
-	h1 Connect with Me
+	h1 Connect
 
 	ul
 		// LinkedIn
-		+connect-item('images/icon/GitHub-Mark-120px.png', 'about:blank')
+		+connect-item-fa('fa-linkedin-square', 'www.linkedin.com/in/JustinBis')
+			| LinkedIn
 		// Facebook
-		+connect-item('images/icon/GitHub-Mark-120px.png', 'about:blank')
+		+connect-item-fa('fa-facebook-official', 'https://www.facebook.com/JB2023')
+			| Facebook
+		// Instagram
+		+connect-item-fa('fa-instagram', 'https://www.instagram.com/justbis/')
+			| Instagram
 		// Github
-		+connect-item('images/icon/GitHub-Mark-120px.png', 'about:blank')
+		+connect-item-fa('fa-github-square', 'https://github.com/JustinBis')
+			| GitHub
+		// Email
+		+connect-item-fa('fa-envelope', 'mailto:justbis+homepage@gmail.com')
+			| Email
