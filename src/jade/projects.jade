@@ -1,23 +1,53 @@
-mixin grid-item(headline)
-	div.grid-item&attributes(attributes)
-		div.info
-			block
-			span= headline
+mixin grid-item(headline, href, imgsrc, imgclass)
+	a(href=href)
+		div.grid-item&attributes(attributes)
+			div.img-container
+				img(src=imgsrc class=imgclass)
+			div.info
+				block
+				span= headline
 
 // Prevent margin collapse with an nbsp
 section#projects
 	h1 Projects
 
 	div.isotope-grid
-		+grid-item('DeepCraft')(class="width2 height2")
+		+grid-item(
+		'DeepCraft',
+		'https://github.com/mdimarco/DeepCraft/blob/master/DeepCraft%20Presentation.pdf',
+		'images/projects/deepcraft.jpg',
+		'height'
+		)(class="width2 height2")
 			| Custom deep convolutional neural networks for Minecraft
-		+grid-item('CourseLogic')
+		+grid-item(
+		'CourseLogic',
+		'http://courselogic.herokuapp.com/',
+		'images/projects/courselogic.png'
+		)
 			| An easy way for students to schedule classes
-		+grid-item('OpenGL Guides')(class="grid-sizer")
+		+grid-item(
+		'OpenGL Guides',
+		'https://github.com/JustinBis/CS123-Guides/blob/master/OpenGL-Guide.md',
+		'images/projects/opengl-logo.jpg'
+		)(class="grid-sizer")
 			| A quick reference for OpenGL made for CS123
-		+grid-item('DarkenJS')
+		+grid-item(
+		'DarkenJS',
+		'https://github.com/JustinBis/Darken.js',
+		'images/projects/darkenjs.jpg'
+		)
 			| Nightmode made easy with Javascript
-		+grid-item('Gender Identifier')
+		+grid-item(
+		'Gender Identifier',
+		'https://github.com/mdimarco/blog_gender_identification',
+		'images/projects/gender.jpg',
+		'bl'
+		)
 			| Author gender identification via machine learning
-		+grid-item('Reddit AMA Bot')
+		+grid-item(
+		'Reddit AMA Bot',
+		'https://github.com/JustinBis/Reddit-AMA-Bot',
+		'images/projects/reddit-ama-bot.jpg',
+		'bl'
+		)
 			| Collects AMA responses on Reddit for easy reading
